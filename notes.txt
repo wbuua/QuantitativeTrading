@@ -1,3 +1,6 @@
 股票数据接口：
 stockapi（https://github.com/hjhgogo/stockapi）
 baostock()
+
+策略回测：
+https://www.ricequant.com/welcome/
