@@ -2,10 +2,21 @@
 编写预测模型或者交易策略-->进行数据回测-->调整模型和策略-->回测
 
 股票数据接口：
-stockapi（https://github.com/hjhgogo/stockapi）
-baostock()
+tushare
 
 策略回测：
-https://www.ricequant.com/welcome/
+backtrader
 
 模型和策略：
+pass
+
+
+BUG修复：
+1.quantstats生成html报告失败的bug。
+ 手动修改本地quantstats安装文件：
+# 打开以下文件
+C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\site-packages\quantstats\_plotting\core.py
+# 找到第294行（约）：
+returns = returns.last() if compound is True else returns.sum(axis=0)
+# 修改为：
+returns = returns.last() if compound is True else returns.sum()
